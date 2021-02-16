@@ -1,0 +1,11 @@
+{
+  "name": "rtc-stats-adapter",
+  "version": "1.0.0",
+  "description": "RTC Stats adapter for different version of getStats()",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergei Rastrigin",
+  "license": "ISC"
+}
