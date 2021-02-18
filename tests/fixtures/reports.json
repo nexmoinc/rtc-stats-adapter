@@ -139,7 +139,6 @@
     "mediaSourceId": "RTCAudioSource_3",
     "remoteId": "RTCRemoteInboundRtpAudioStream_2914941745",
     "packetsSent": 25066,
-    "packetsLost": 0,
     "roundTripTime": 0.123,
     "retransmittedPacketsSent": 0,
     "bytesSent": 1620231,
