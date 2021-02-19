@@ -27,9 +27,6 @@ const rules = {
     packetsLost: "audioSentPacketsLost",
     roundTripTime: "audioRtt",
   },
-  "local-candidate": {
-    candidateType: "audioLocalCandidateType",
-  },
   "remote-candidate": {
     candidateType: "audioRemoteCandidateType",
   },
@@ -41,14 +38,6 @@ const parsers = {
     const result = mapKeys(report);
 
     result.audioRemoteAddress = getAddress(report);
-
-    return result;
-  },
-  "local-candidate": function (report) {
-    const result = mapKeys(report);
-
-    result.audioLocalAddress = getAddress(report);
-    result.transportType = report.protocol || report.transport;
 
     return result;
   },

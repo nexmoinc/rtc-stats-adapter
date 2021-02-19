@@ -1,4 +1,4 @@
-const stats = require("./fixtures/reports.json");
+const stats = require("./fixtures/mac/firefox/85.0.2.json");
 const { mappers: parsers, rules } = require("../parsers/new-api");
 const run = require("../index");
 

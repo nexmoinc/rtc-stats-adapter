@@ -1,0 +1,92 @@
+{
+  "candidate-pair": {
+    "id": "ec821130",
+    "timestamp": 1613669168504,
+    "type": "candidate-pair",
+    "bytesReceived": 203549,
+    "bytesSent": 392983,
+    "lastPacketReceivedTimestamp": 1613669168487,
+    "lastPacketSentTimestamp": 1613669168499,
+    "localCandidateId": "e437b010",
+    "nominated": true,
+    "priority": 2830970935721983,
+    "readable": true,
+    "remoteCandidateId": "f23366c8",
+    "selected": true,
+    "state": "succeeded",
+    "transportId": "transport_0",
+    "writable": true
+  },
+  "local-candidate": {
+    "id": "4ce24ca3",
+    "timestamp": 1613669168504,
+    "type": "local-candidate",
+    "address": "192.168.2.1",
+    "candidateType": "host",
+    "port": 54426,
+    "priority": 2105458943,
+    "protocol": "tcp"
+  },
+  "remote-candidate": {
+    "id": "f23366c8",
+    "timestamp": 1613669168504,
+    "type": "remote-candidate",
+    "address": "169.45.209.50",
+    "candidateType": "host",
+    "port": 15888,
+    "priority": 659136,
+    "protocol": "udp"
+  },
+  "inbound-rtp": {
+    "id": "37522a18",
+    "timestamp": 1613669168504,
+    "type": "inbound-rtp",
+    "kind": "audio",
+    "mediaType": "audio",
+    "ssrc": 1212436101,
+    "jitter": 0,
+    "packetsLost": 0,
+    "packetsReceived": 2125,
+    "bytesReceived": 176037,
+    "nackCount": 0,
+    "remoteId": "f9b8bcee"
+  },
+  "outbound-rtp": {
+    "id": "e35d7918",
+    "timestamp": 1613669168504,
+    "type": "outbound-rtp",
+    "kind": "audio",
+    "mediaType": "audio",
+    "ssrc": 51340249,
+    "bytesSent": 369276,
+    "packetsSent": 2134,
+    "nackCount": 0,
+    "remoteId": "8db11592"
+  },
+  "remote-inbound-rtp": {
+    "id": "8db11592",
+    "timestamp": 1613669167776,
+    "type": "remote-inbound-rtp",
+    "kind": "audio",
+    "mediaType": "audio",
+    "ssrc": 51340249,
+    "jitter": 0,
+    "packetsLost": 1,
+    "packetsReceived": 21340,
+    "bytesReceived": 3436680,
+    "localId": "e35d7918",
+    "roundTripTime": 0.095
+  },
+  "remote-outbound-rtp": {
+    "id": "f9b8bcee",
+    "timestamp": 1613669167776,
+    "type": "remote-outbound-rtp",
+    "kind": "audio",
+    "mediaType": "audio",
+    "ssrc": 1212436101,
+    "bytesSent": 169231,
+    "packetsSent": 2089,
+    "localId": "37522a18",
+    "remoteTimestamp": 3822657967724
+  }
+}
