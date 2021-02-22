@@ -26,18 +26,13 @@ test("should run parsers for each report and return parsed stats report", () => 
   const parsedReports = run(stats);
 
   const expetedResult = {
-    audioLocalAddress: "90.242.135.249:63095",
-    audioLocalCandidateType: "srflx",
     audioRecvBytes: 812646,
     audioRecvPackets: 25055,
     audioRecvPacketsLost: 0,
-    audioRemoteAddress: "169.45.209.35:14564",
-    audioRemoteCandidateType: "host",
     audioRtt: 0.092,
     audioSentBytes: 1620231,
     audioSentPackets: 25066,
     audioSentPacketsLost: 1,
-    transportType: "udp",
   };
 
   expect(parsedReports).toStrictEqual(expetedResult);

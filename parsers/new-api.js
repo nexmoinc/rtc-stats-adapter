@@ -27,19 +27,12 @@ const rules = {
     packetsLost: "audioSentPacketsLost",
     roundTripTime: "audioRtt",
   },
-  "remote-candidate": {
-    candidateType: "audioRemoteCandidateType",
-  },
 };
 
 // Additional logic to parse values can be done here
 const parsers = {
   "remote-candidate": function (report) {
-    const result = mapKeys(report);
-
-    result.audioRemoteAddress = getAddress(report);
-
-    return result;
+    return mapKeys(report);
   },
   "inbound-rtp": function (report) {
     return mapKeys(report);
