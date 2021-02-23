@@ -1,13 +1,13 @@
 const Joi = require('joi');
 
 const metadataSchema = Joi.object({
-    // All Metadata is optional as it 
     conversationId: Joi.string.optional(),
     legId: Joi.string.optional(),
     sessionId: Joi.string.optional(),
-    owner: Joi.string().valid("nexmo")
+    owner: Joi.string().valid("nexmo").required()
 })
 
+// Core set of RTC Stats that is implemented well X-Browser
 const statsSchema = Joi.object({
     audioRecvBytes: Joi.number()
         .integer()
@@ -44,4 +44,10 @@ const statsSchema = Joi.object({
         .required(),
 })
 
-const finalSchema = Joi.object({}).append(metadataSchema).append(statsSchema)
+// The schema when we send data for ingestion  
+const eventSchema = Joi.object({}).append(metadataSchema).append(statsSchema)
+
+module.exports = {
+    rtcStats: statsSchema,
+    event: eventSchema
+}
