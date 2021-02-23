@@ -1,9 +1,7 @@
 const Joi = require('joi');
 
 const metadataSchema = Joi.object({
-    conversationId: Joi.string.optional(),
-    legId: Joi.string.optional(),
-    sessionId: Joi.string.optional(),
+    legId: Joi.string.required(),
     owner: Joi.string().valid("nexmo").required()
 })
 
