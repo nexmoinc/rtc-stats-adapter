@@ -1,4 +1,4 @@
-# RTC stats adapter1
+# RTC stats adapter
 
 The purpose of this module is to parse and map data from RTCStatsReport.
 
