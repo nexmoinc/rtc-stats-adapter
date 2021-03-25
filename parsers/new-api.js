@@ -12,10 +12,12 @@ const rules = {
     packetsReceived: "audioRecvPackets",
     packetsLost: "audioRecvPacketsLost",
     bytesReceived: "audioRecvBytes",
+    jitter: "audioRecvJitter"
   },
   "remote-inbound-rtp": {
     packetsLost: "audioSentPacketsLost",
     roundTripTime: "audioRtt",
+    jitter: "audioSentJitter"
   },
 };
 
