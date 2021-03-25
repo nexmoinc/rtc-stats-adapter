@@ -13,7 +13,7 @@ function parse(reports) {
     }
   });
 
-  result.networkMos = calculateMos(reports);
+  result.networkMos = parseFloat(calculateMos(reports));
 
   return result;
 }
