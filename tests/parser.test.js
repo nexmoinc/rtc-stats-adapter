@@ -20,6 +20,7 @@ test.each(filePaths)(".should correctly map a report from %s", (file) => {
     "audioSentPacketsLost",
     "audioSentJitter",
     "audioRecvJitter",
+    "networkMos"
   ];
 
   expect(Object.keys(parsedReports).sort()).toIncludeSameMembers(

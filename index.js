@@ -1,29 +1,19 @@
+const { iterateReports } = require("./utils");
 const { parsers } = require("./parsers/new-api");
+const calculateMos = require("./calculate-mos");
 
-function parse(stats) {
+function parse(reports) {
   const result = {};
-  if (typeof stats[Symbol.iterator] === "function") {
-    for (const el of stats) {
-      const report = Array.isArray(el) ? el[1] : el;
-      if (report.type in parsers) {
-        const mappedReport = parsers[report.type](report);
 
-        Object.assign(result, mappedReport);
-      }
+  iterateReports(reports, (report) => {
+    if (report.type in parsers) {
+      const mappedReport = parsers[report.type](report);
+
+      Object.assign(result, mappedReport);
     }
-  } else {
-    for (const key in stats) {
-      if (stats.hasOwnProperty(key)) {
-        const report = stats[key];
+  });
 
-        if (report.type in parsers) {
-          const mappedReport = parsers[report.type](report);
-
-          Object.assign(result, mappedReport);
-        }
-      }
-    }
-  }
+  result.networkMos = calculateMos(reports);
 
   return result;
 }
