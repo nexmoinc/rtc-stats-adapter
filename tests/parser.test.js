@@ -27,5 +27,5 @@ test.each(filePaths)(".should correctly map a report from %s", (file) => {
     expetedResult.sort()
   );
 
-    expect(rtcStats.validate(parsedReports).error).toBeUndefined();
+  expect(rtcStats.validate(parsedReports).error).toBeUndefined();
 });
